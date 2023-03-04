@@ -50,11 +50,12 @@ class ViewController: UIViewController {
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
-
-        // Set up debt input view
-        debtInputView.backgroundColor = .orange
-        view.addSubview(debtInputView)
-
+        
+        func addNewButton(){
+            // Set up debt input view
+            debtInputView.backgroundColor = .orange
+            view.addSubview(debtInputView)}
+         
         // Set up debt input view constraints
         debtInputView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -100,16 +101,17 @@ class ViewController: UIViewController {
 
        
         // Set up test button
+        /*
         let testButton = UIButton()
         testButton.setTitle("Test Button", for: .normal)
-        testButton.setTitleColor(.green, for: .normal)
+        testButton.setTitleColor(.red, for: .normal)
         testButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
         debtInputView.addSubview(testButton)
 
         NSLayoutConstraint.activate([
             testButton.centerXAnchor.constraint(equalTo: debtInputView.centerXAnchor),
             testButton.centerYAnchor.constraint(equalTo: debtInputView.centerYAnchor),
-        ])
+        ])*/
 
         // Set up table view
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -153,9 +155,10 @@ class ViewController: UIViewController {
         }
 
             @objc func addButtonTapped(sender: UIButton) {
-                addInputButton.backgroundColor = .green
+            //let newDebtInputView = UIView()
+            // add any additional setup code for the new view here
+            //tableView.addSubview(newDebtInputView)
             }
-            
            
             
 
